@@ -1,19 +1,14 @@
+import Link from "next/link"
 import { Cog, Mail, MapPin, Phone } from "lucide-react"
 
-const SERVICE_LINKS = [
-  "Estruturas metálicas",
-  "Projetos mecânicos",
-  "Modelagem 3D e CAE",
-  "Manutenção e retrofit",
-  "Montagem industrial",
-]
+import { SERVICES } from "@/lib/services-data"
 
 const COMPANY_LINKS = [
-  { href: "#servicos", label: "Serviços" },
-  { href: "#diferenciais", label: "Diferenciais" },
-  { href: "#projetos", label: "Projetos" },
-  { href: "#depoimentos", label: "Depoimentos" },
-  { href: "#contato", label: "Contato" },
+  { href: "/servicos", label: "Serviços" },
+  { href: "/#diferenciais", label: "Diferenciais" },
+  { href: "/projetos", label: "Projetos" },
+  { href: "/#depoimentos", label: "Depoimentos" },
+  { href: "/#contato", label: "Contato" },
 ]
 
 export function Footer() {
@@ -22,14 +17,14 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <a href="#top" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground">
                 <Cog className="h-5 w-5" aria-hidden="true" />
               </span>
               <span className="font-heading text-xl font-bold tracking-tight">
                 METAL<span className="text-primary">PRO</span>
               </span>
-            </a>
+            </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-muted">
               Engenharia mecânica, estruturas metálicas e fabricação
               industrial com equipe própria e projetos com ART.
@@ -43,12 +38,12 @@ export function Footer() {
             <ul className="mt-4 flex flex-col gap-3">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-brand-muted transition-colors hover:text-brand-foreground"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -59,12 +54,14 @@ export function Footer() {
               Serviços
             </h3>
             <ul className="mt-4 flex flex-col gap-3">
-              {SERVICE_LINKS.map((service) => (
-                <li
-                  key={service}
-                  className="text-sm text-brand-muted"
-                >
-                  {service}
+              {SERVICES.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    href={`/servicos#${service.slug}`}
+                    className="text-sm text-brand-muted transition-colors hover:text-brand-foreground"
+                  >
+                    {service.title}
+                  </Link>
                 </li>
               ))}
             </ul>
