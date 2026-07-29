@@ -7,7 +7,6 @@ const COMPANY_LINKS = [
   { href: "/servicos", label: "Serviços" },
   { href: "/#diferenciais", label: "Diferenciais" },
   { href: "/projetos", label: "Projetos" },
-  { href: "/#depoimentos", label: "Depoimentos" },
   { href: "/#contato", label: "Contato" },
 ]
 
@@ -22,12 +21,12 @@ export function Footer() {
                 <Cog className="h-5 w-5" aria-hidden="true" />
               </span>
               <span className="font-heading text-xl font-bold tracking-tight">
-                METAL<span className="text-primary">PRO</span>
+                VECTUM<span className="text-primary">.</span>
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-muted">
-              Engenharia mecânica, estruturas metálicas e fabricação
-              industrial com equipe própria e projetos com ART.
+              Engenharia mecânica e estruturas metálicas sob medida, com
+              atendimento direto dos sócios-fundadores.
             </p>
           </div>
 
@@ -74,23 +73,26 @@ export function Footer() {
             <ul className="mt-4 flex flex-col gap-3 text-sm text-brand-muted">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-primary" />
-                (11) 4002-8922
+                (51) 99697-4808
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0 text-primary" />
+                (51) 9929-4319
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 text-primary" />
-                contato@metalpro.eng.br
+                Vectum.engenaharia@gmail.com
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                Rod. Anhanguera, km 32 — Osasco/SP
+                Santa Cruz do Sul e região — RS
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm text-brand-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} MetalPro Engenharia. Todos os direitos reservados.</p>
-          <p>CNPJ 00.000.000/0001-00 &middot; CREA 000000000-0</p>
+          <p>&copy; {new Date().getFullYear()} Vectum Engenharia. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

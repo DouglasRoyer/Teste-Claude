@@ -1,70 +1,91 @@
-import { ArrowRight, ShieldCheck } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, Lock, Sparkles } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { SplineScene } from "@/components/ui/splite"
 import { Spotlight } from "@/components/ui/spotlight"
 
-const STATS = [
-  { value: "18+", label: "anos de atuação" },
-  { value: "420+", label: "projetos entregues" },
-  { value: "3.200t", label: "de aço fabricado" },
-  { value: "98%", label: "de obras no prazo" },
+const HIGHLIGHTS = [
+  { label: "Engenharia própria, do projeto à montagem" },
+  { label: "Atendimento direto com os sócios" },
+  { label: "Santa Cruz do Sul e região" },
 ]
 
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="relative overflow-hidden bg-brand text-brand-foreground"
-    >
-      <div className="bg-blueprint-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,black,transparent)]" />
-      <Spotlight className="-top-40 left-1/4" size={500} fill="#f97316" />
+    <section id="top" className="relative overflow-hidden bg-background">
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 50% 0%, color-mix(in srgb, var(--primary) 12%, transparent), transparent)",
+        }}
+      />
+      <div className="bg-blueprint-grid pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_70%_55%_at_50%_0%,black,transparent)]" />
 
-      <div className="relative mx-auto flex max-w-7xl flex-col px-6 pt-20 pb-16 sm:pt-28 sm:pb-24">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-brand-muted">
-            <ShieldCheck className="h-4 w-4 text-primary" />
-            Engenharia certificada CREA &middot; NBR &amp; ISO 9001
-          </div>
-
-          <h1 className="font-heading mt-6 text-5xl leading-[1.05] font-bold tracking-tight text-balance sm:text-6xl lg:text-7xl">
-            Estruturas metálicas e projetos mecânicos de precisão
-          </h1>
-
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-brand-muted sm:text-xl">
-            Do cálculo estrutural ao comissionamento: projetamos, fabricamos e
-            montamos estruturas metálicas e máquinas industriais sob medida
-            para a sua operação, com engenharia própria e prazo garantido em
-            contrato.
-          </p>
-
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button asChild size="lg">
-              <a href="#contato">
-                Solicitar orçamento
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/20 bg-transparent text-brand-foreground hover:bg-white/10 hover:text-brand-foreground"
-            >
-              <a href="#projetos">Ver projetos executados</a>
-            </Button>
-          </div>
+      <div className="relative mx-auto flex max-w-5xl flex-col items-center px-6 pt-20 pb-20 text-center sm:pt-28">
+        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted/60 px-4 py-1.5 text-sm text-muted-foreground">
+          <Sparkles className="h-4 w-4 text-primary" aria-hidden="true" />
+          <span className="font-semibold text-foreground">Novo</span>
+          <span className="text-border">|</span>
+          Vectum Engenharia está no ar
         </div>
 
-        <dl className="mt-16 grid grid-cols-2 gap-6 border-t border-white/10 pt-10 sm:mt-20 sm:grid-cols-4 sm:gap-8">
-          {STATS.map((stat) => (
-            <div key={stat.label}>
-              <dt className="font-heading text-4xl font-bold text-primary sm:text-5xl">
-                {stat.value}
-              </dt>
-              <dd className="mt-1 text-sm text-brand-muted">{stat.label}</dd>
+        <h1 className="font-heading mt-6 max-w-3xl text-5xl leading-[1.05] font-bold tracking-tight text-balance text-foreground sm:text-6xl lg:text-7xl">
+          Estruturas metálicas e máquinas industriais, sob medida.
+        </h1>
+
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
+          Projeto, fabricação e montagem com engenharia mecânica própria — da
+          primeira ideia ao aço pronto, atendendo Santa Cruz do Sul e região.
+        </p>
+
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <Button asChild size="lg">
+            <Link href="/#contato">
+              Solicitar orçamento
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline">
+            <Link href="/servicos">Ver serviços</Link>
+          </Button>
+        </div>
+
+        <dl className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+          {HIGHLIGHTS.map((item) => (
+            <div key={item.label} className="flex items-center gap-2">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+              <dd className="text-sm text-muted-foreground">{item.label}</dd>
             </div>
           ))}
         </dl>
+
+        <div className="relative mt-16 w-full max-w-5xl overflow-hidden rounded-xl border border-border bg-card shadow-2xl">
+          <div className="flex h-10 items-center border-b border-border bg-muted/40 px-4">
+            <div className="flex gap-1.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+              <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+              <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
+            </div>
+            <div className="flex flex-1 items-center justify-center gap-1.5 text-xs text-muted-foreground">
+              <Lock className="h-3 w-3" aria-hidden="true" />
+              vectum.eng.br
+            </div>
+          </div>
+
+          <div className="relative h-[380px] overflow-hidden bg-brand sm:h-[480px]">
+            <Spotlight
+              className="-top-20 left-1/3"
+              size={500}
+              fill="#f97316"
+            />
+            <SplineScene
+              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+              className="h-full w-full"
+            />
+          </div>
+        </div>
       </div>
     </section>
   )

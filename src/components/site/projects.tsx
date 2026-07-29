@@ -12,10 +12,10 @@ export function Projects() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
             <span className="text-sm font-semibold tracking-wide text-primary uppercase">
-              Projetos executados
+              Áreas de atuação
             </span>
             <h2 className="font-heading mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Obras e máquinas entregues por nossa equipe
+              Tipos de projeto que atendemos
             </h2>
           </div>
           <Button asChild variant="outline" size="lg" className="shrink-0">

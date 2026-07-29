@@ -9,9 +9,9 @@ import { ProjectsFilterGrid } from "@/components/site/projects-filter-grid"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Projetos | MetalPro Engenharia",
+  title: "Projetos | Vectum Engenharia",
   description:
-    "Galpões, coberturas, plataformas, silos, transportadores e máquinas industriais projetados e entregues pela MetalPro Engenharia.",
+    "Galpões, coberturas, plataformas, silos, transportadores e máquinas industriais: conheça os tipos de projeto que a Vectum Engenharia atende.",
 }
 
 export default function ProjetosPage() {
@@ -20,9 +20,9 @@ export default function ProjetosPage() {
       <Navbar />
       <main className="flex-1">
         <PageHeader
-          eyebrow="Projetos executados"
-          title="Obras e máquinas entregues por nossa equipe"
-          description="Uma amostra de estruturas metálicas e máquinas industriais que projetamos, fabricamos e montamos para clientes em diferentes setores."
+          eyebrow="Áreas de atuação"
+          title="Tipos de projeto que atendemos"
+          description="Uma amostra dos tipos de estrutura metálica e máquina industrial que projetamos e fabricamos, para diferentes setores e portes de operação."
         />
 
         <section className="bg-background py-24">

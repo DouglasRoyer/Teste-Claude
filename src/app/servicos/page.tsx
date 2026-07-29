@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/button"
 import { SERVICES } from "@/lib/services-data"
 
 export const metadata: Metadata = {
-  title: "Serviços | MetalPro Engenharia",
+  title: "Serviços | Vectum Engenharia",
   description:
-    "Estruturas metálicas, projetos mecânicos, modelagem 3D, cálculo estrutural, manutenção e montagem industrial. Conheça os serviços de engenharia da MetalPro.",
+    "Estruturas metálicas, projetos mecânicos, modelagem 3D, cálculo estrutural, manutenção e montagem industrial. Conheça os serviços de engenharia da Vectum.",
 }
 
 export default function ServicosPage() {

@@ -34,7 +34,7 @@ export function Differentials() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <span className="text-sm font-semibold tracking-wide text-primary uppercase">
-              Por que a MetalPro
+              Por que a Vectum
             </span>
             <h2 className="font-heading mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               Precisão de engenharia, do papel ao aço

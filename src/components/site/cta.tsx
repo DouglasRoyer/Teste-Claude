@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ArrowRight, Phone } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -16,10 +17,10 @@ export function Cta() {
         </p>
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
           <Button asChild size="lg">
-            <a href="#contato">
+            <Link href="/#contato">
               Solicitar orçamento
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </Button>
           <Button
             asChild
@@ -27,9 +28,9 @@ export function Cta() {
             variant="outline"
             className="border-white/20 bg-transparent text-brand-foreground hover:bg-white/10 hover:text-brand-foreground"
           >
-            <a href="tel:+551140028922">
+            <a href="tel:+5551996974808">
               <Phone className="h-4 w-4" />
-              (11) 4002-8922
+              (51) 99697-4808
             </a>
           </Button>
         </div>

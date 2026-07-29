@@ -13,9 +13,9 @@ const barlowCondensed = Barlow_Condensed({
   weight: ["500", "600", "700", "800"],
 });
 
-const title = "MetalPro Engenharia | Estruturas Metálicas e Projetos Mecânicos";
+const title = "Vectum Engenharia | Estruturas Metálicas e Projetos Mecânicos";
 const description =
-  "Projeto, fabricação e montagem de estruturas metálicas e máquinas industriais. Engenharia mecânica de precisão, do cálculo estrutural à entrega em obra.";
+  "Projeto, fabricação e montagem de estruturas metálicas e máquinas industriais em Santa Cruz do Sul e região. Engenharia mecânica de precisão, do cálculo estrutural à entrega em obra.";
 
 export const metadata: Metadata = {
   title,

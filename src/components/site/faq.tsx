@@ -12,9 +12,9 @@ const FAQS = [
       "Entregamos ART de projeto e execução, memorial de cálculo estrutural, desenhos de fabricação e montagem, e o as built ao final da obra.",
   },
   {
-    question: "Vocês atendem fora do estado de São Paulo?",
+    question: "Vocês atendem fora de Santa Cruz do Sul?",
     answer:
-      "Sim. Já executamos projetos em todas as regiões do Brasil. O deslocamento de equipe e logística de transporte são incluídos no orçamento.",
+      "Sim. Atendemos Santa Cruz do Sul e toda a região. Para cidades mais distantes, consulte disponibilidade e custo de deslocamento no orçamento.",
   },
   {
     question: "Qual o prazo médio de um projeto de estrutura metálica?",
@@ -29,7 +29,7 @@ const FAQS = [
   {
     question: "Como funciona a garantia dos serviços?",
     answer:
-      "Estruturas e máquinas fabricadas pela MetalPro têm garantia contratual contra defeitos de fabricação e montagem, com prazo definido em contrato conforme o tipo de projeto.",
+      "Estruturas e máquinas fabricadas pela Vectum têm garantia contratual contra defeitos de fabricação e montagem, com prazo definido em contrato conforme o tipo de projeto.",
   },
 ]
 

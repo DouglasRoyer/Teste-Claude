@@ -13,7 +13,6 @@ const NAV_LINKS = [
   { href: "/#diferenciais", label: "Diferenciais" },
   { href: "/#processo", label: "Processo" },
   { href: "/projetos", label: "Projetos" },
-  { href: "/#depoimentos", label: "Depoimentos" },
   { href: "/#contato", label: "Contato" },
 ]
 
@@ -28,7 +27,7 @@ export function Navbar() {
             <Cog className="h-5 w-5" aria-hidden="true" />
           </span>
           <span className="font-heading text-xl font-bold tracking-tight">
-            METAL<span className="text-primary">PRO</span>
+            VECTUM<span className="text-primary">.</span>
           </span>
         </Link>
 
