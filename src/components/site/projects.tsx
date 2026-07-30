@@ -30,10 +30,10 @@ export function Projects() {
           {PROJECTS.slice(0, 3).map((project) => (
             <article
               key={project.slug}
-              className="group overflow-hidden rounded-lg border border-border bg-background"
+              className="group overflow-hidden rounded-lg border border-border bg-card"
             >
-              <div className="bg-blueprint-grid relative flex h-44 items-center justify-center overflow-hidden bg-brand">
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand via-brand/40 to-transparent" />
+              <div className="bg-blueprint-grid relative flex h-44 items-center justify-center overflow-hidden bg-[#05070c]">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070c] via-[#05070c]/40 to-transparent" />
                 <project.icon
                   className="relative h-16 w-16 text-primary/90 transition-transform duration-300 group-hover:scale-110"
                   strokeWidth={1.5}

@@ -74,7 +74,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative h-[380px] overflow-hidden bg-brand sm:h-[480px]">
+          <div className="relative h-[380px] overflow-hidden bg-[#05070c] sm:h-[480px]">
             <Spotlight
               className="-top-20 left-1/3"
               size={500}
