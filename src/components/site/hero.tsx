@@ -1,9 +1,7 @@
 import Link from "next/link"
-import { ArrowRight, Lock, Sparkles } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { SplineScene } from "@/components/ui/splite"
-import { Spotlight } from "@/components/ui/spotlight"
 
 const HIGHLIGHTS = [
   { label: "Engenharia própria, do projeto à montagem" },
@@ -60,32 +58,6 @@ export function Hero() {
             </div>
           ))}
         </dl>
-
-        <div className="relative mt-16 w-full max-w-5xl overflow-hidden rounded-xl border border-border bg-card shadow-2xl">
-          <div className="flex h-10 items-center border-b border-border bg-muted/40 px-4">
-            <div className="flex gap-1.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-              <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
-              <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
-            </div>
-            <div className="flex flex-1 items-center justify-center gap-1.5 text-xs text-muted-foreground">
-              <Lock className="h-3 w-3" aria-hidden="true" />
-              vectum.eng.br
-            </div>
-          </div>
-
-          <div className="relative h-[380px] overflow-hidden bg-[#05070c] sm:h-[480px]">
-            <Spotlight
-              className="-top-20 left-1/3"
-              size={500}
-              fill="#f97316"
-            />
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="h-full w-full"
-            />
-          </div>
-        </div>
       </div>
     </section>
   )
