@@ -1,11 +1,11 @@
 import { Navbar } from "@/components/site/navbar";
 import { Hero } from "@/components/site/hero";
+import { Stats } from "@/components/site/stats";
 import { Services } from "@/components/site/services";
 import { About } from "@/components/site/about";
 import { Differentials } from "@/components/site/differentials";
 import { Process } from "@/components/site/process";
 import { Projects } from "@/components/site/projects";
-import { Testimonials } from "@/components/site/testimonials";
 import { Faq } from "@/components/site/faq";
 import { Cta } from "@/components/site/cta";
 import { Contact } from "@/components/site/contact";
@@ -17,12 +17,12 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <Stats />
         <Services />
         <About />
         <Differentials />
         <Process />
         <Projects />
-        <Testimonials />
         <Faq />
         <Cta />
         <Contact />

@@ -13,7 +13,6 @@ const NAV_LINKS = [
   { href: "/#diferenciais", label: "Diferenciais" },
   { href: "/#processo", label: "Processo" },
   { href: "/projetos", label: "Projetos" },
-  { href: "/#depoimentos", label: "Depoimentos" },
   { href: "/#contato", label: "Contato" },
 ]
 
@@ -21,14 +20,14 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-brand/95 backdrop-blur supports-[backdrop-filter]:bg-brand/80">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2 text-brand-foreground">
+        <Link href="/" className="flex items-center gap-2 text-foreground">
           <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <Cog className="h-5 w-5" aria-hidden="true" />
           </span>
           <span className="font-heading text-xl font-bold tracking-tight">
-            METAL<span className="text-primary">PRO</span>
+            VECTUM<span className="text-primary">.</span>
           </span>
         </Link>
 
@@ -37,7 +36,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-brand-muted transition-colors hover:text-brand-foreground"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -54,7 +53,7 @@ export function Navbar() {
           type="button"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
-          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md text-brand-foreground lg:hidden"
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-md text-foreground lg:hidden"
           onClick={() => setOpen((prev) => !prev)}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -63,7 +62,7 @@ export function Navbar() {
 
       <div
         className={cn(
-          "grid overflow-hidden border-t border-white/10 bg-brand transition-[grid-template-rows] duration-300 ease-out lg:hidden",
+          "grid overflow-hidden border-t border-border bg-background transition-[grid-template-rows] duration-300 ease-out lg:hidden",
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
         )}
       >
@@ -74,7 +73,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2.5 text-sm font-medium text-brand-muted transition-colors hover:bg-white/5 hover:text-brand-foreground"
+                className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-white/5 hover:text-foreground"
               >
                 {link.label}
               </Link>

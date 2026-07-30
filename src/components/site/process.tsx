@@ -1,3 +1,7 @@
+'use client'
+
+import { motion } from "framer-motion"
+
 const STEPS = [
   {
     number: "01",
@@ -51,8 +55,15 @@ export function Process() {
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-          {STEPS.map((step) => (
-            <div key={step.number} className="relative pl-16">
+          {STEPS.map((step, index) => (
+            <motion.div
+              key={step.number}
+              className="relative pl-16"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+            >
               <span className="font-heading absolute top-0 left-0 flex h-12 w-12 items-center justify-center rounded-md border border-border bg-muted/40 text-lg font-bold text-primary">
                 {step.number}
               </span>
@@ -62,7 +73,7 @@ export function Process() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {step.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

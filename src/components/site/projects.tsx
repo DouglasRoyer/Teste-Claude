@@ -12,10 +12,10 @@ export function Projects() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
             <span className="text-sm font-semibold tracking-wide text-primary uppercase">
-              Projetos executados
+              Áreas de atuação
             </span>
             <h2 className="font-heading mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Obras e máquinas entregues por nossa equipe
+              Tipos de projeto que atendemos
             </h2>
           </div>
           <Button asChild variant="outline" size="lg" className="shrink-0">
@@ -30,10 +30,10 @@ export function Projects() {
           {PROJECTS.slice(0, 3).map((project) => (
             <article
               key={project.slug}
-              className="group overflow-hidden rounded-lg border border-border bg-background"
+              className="group overflow-hidden rounded-lg border border-border bg-card"
             >
-              <div className="bg-blueprint-grid relative flex h-44 items-center justify-center overflow-hidden bg-brand">
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand via-brand/40 to-transparent" />
+              <div className="bg-blueprint-grid relative flex h-44 items-center justify-center overflow-hidden bg-[#05070c]">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#05070c] via-[#05070c]/40 to-transparent" />
                 <project.icon
                   className="relative h-16 w-16 text-primary/90 transition-transform duration-300 group-hover:scale-110"
                   strokeWidth={1.5}

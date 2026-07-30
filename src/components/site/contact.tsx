@@ -9,17 +9,17 @@ const CONTACT_INFO = [
   {
     icon: Phone,
     label: "Telefone",
-    value: "(11) 4002-8922",
+    value: "(51) 99697-4808 / (51) 9929-4319",
   },
   {
     icon: Mail,
     label: "E-mail",
-    value: "contato@metalpro.eng.br",
+    value: "Vectum.engenaharia@gmail.com",
   },
   {
     icon: MapPin,
     label: "Endereço",
-    value: "Rod. Anhanguera, km 32 — Distrito Industrial, Osasco/SP",
+    value: "Santa Cruz do Sul e região — RS",
   },
   {
     icon: Clock,

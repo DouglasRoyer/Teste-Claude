@@ -9,9 +9,9 @@ import { Button } from "@/components/ui/button"
 import { SERVICES } from "@/lib/services-data"
 
 export const metadata: Metadata = {
-  title: "Serviços | MetalPro Engenharia",
+  title: "Serviços | Vectum Engenharia",
   description:
-    "Estruturas metálicas, projetos mecânicos, modelagem 3D, cálculo estrutural, manutenção e montagem industrial. Conheça os serviços de engenharia da MetalPro.",
+    "Estruturas metálicas, projetos mecânicos, modelagem 3D, cálculo estrutural, manutenção e montagem industrial. Conheça os serviços de engenharia da Vectum.",
 }
 
 export default function ServicosPage() {
@@ -75,12 +75,12 @@ export default function ServicosPage() {
           </div>
         </section>
 
-        <section className="bg-brand text-brand-foreground py-20">
-          <div className="mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+        <section className="px-6 py-20">
+          <div className="mx-auto flex max-w-4xl flex-col items-center rounded-3xl border border-border bg-white/[0.03] px-8 py-16 text-center sm:px-16">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Não sabe qual serviço se aplica ao seu projeto?
             </h2>
-            <p className="mt-4 max-w-xl text-lg text-brand-muted">
+            <p className="mt-4 max-w-xl text-lg text-muted-foreground">
               Conte para nossa equipe o que você precisa e nós indicamos o
               melhor caminho técnico e comercial.
             </p>

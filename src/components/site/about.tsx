@@ -1,23 +1,23 @@
-import { Cog, Factory, Users } from "lucide-react"
+import { Cog, MapPin, Users } from "lucide-react"
 
 const HIGHLIGHTS = [
   {
-    icon: Factory,
-    title: "Planta própria",
+    icon: Users,
+    title: "Atendimento direto dos sócios",
     description:
-      "Galpão fabril equipado com corte a laser, dobradeiras CNC e cabines de solda robotizada.",
+      "Você fala com quem projeta e executa, sem intermediários, do orçamento à entrega.",
   },
   {
     icon: Cog,
-    title: "Engenharia integrada",
+    title: "Engenharia própria",
     description:
-      "Mesma equipe do projeto acompanha a fabricação e a montagem, reduzindo divergências em obra.",
+      "Projeto mecânico, cálculo estrutural e detalhamento feitos internamente pela nossa equipe.",
   },
   {
-    icon: Users,
-    title: "Equipe própria",
+    icon: MapPin,
+    title: "Foco regional",
     description:
-      "Soldadores certificados, montadores e engenheiros de segurança do trabalho no quadro fixo.",
+      "Atendimento dedicado a Santa Cruz do Sul e região, com visitas técnicas e prazos ágeis.",
   },
 ]
 
@@ -28,23 +28,28 @@ export function About() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-6">
             <span className="text-sm font-semibold tracking-wide text-primary uppercase">
-              Sobre a MetalPro
+              Sobre a Vectum
             </span>
             <h2 className="font-heading mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Quase duas décadas transformando aço em soluções de engenharia
+              Uma empresa nova, com engenharia séria desde o primeiro projeto
             </h2>
             <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-muted-foreground">
               <p>
-                A MetalPro nasceu dentro de uma oficina de manutenção
-                industrial e, ao longo de mais de 18 anos, cresceu para se
-                tornar uma empresa completa de engenharia mecânica: projeto,
-                cálculo estrutural, fabricação e montagem sob o mesmo teto.
+                A Vectum Engenharia nasce da parceria entre{" "}
+                <span className="font-semibold text-foreground">
+                  Douglas Royer
+                </span>{" "}
+                e{" "}
+                <span className="font-semibold text-foreground">
+                  Rodrigo Luiz
+                </span>
+                , unindo projeto mecânico, cálculo estrutural e fabricação de
+                estruturas metálicas em um só lugar.
               </p>
               <p>
-                Hoje atendemos indústrias de alimentos, mineração, logística e
-                construção civil, sempre com engenheiros responsáveis
-                registrados no CREA e processos alinhados às normas técnicas
-                brasileiras.
+                Por sermos uma empresa nova, cada projeto recebe atenção
+                direta dos sócios-fundadores — da primeira conversa até a
+                entrega em obra, atendendo Santa Cruz do Sul e região.
               </p>
             </div>
           </div>

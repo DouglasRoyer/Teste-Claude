@@ -27,46 +27,47 @@ const DIFFERENTIALS = [
   },
 ]
 
+const NORMS = ["NBR 8800", "NBR 14762", "NR-12", "ISO 9001", "CREA/ART"]
+
 export function Differentials() {
   return (
-    <section id="diferenciais" className="bg-muted/40 py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <span className="text-sm font-semibold tracking-wide text-primary uppercase">
-              Por que a MetalPro
-            </span>
-            <h2 className="font-heading mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Precisão de engenharia, do papel ao aço
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Unimos cálculo estrutural, modelagem 3D e fabricação própria
-              para reduzir retrabalho, cumprir prazos e entregar equipamentos
-              que operam com segurança por décadas.
-            </p>
+    <section id="diferenciais" className="relative px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="text-sm font-medium text-muted-foreground">
+            Por que a <span className="text-primary">Vectum</span>
+          </span>
+          <h2 className="font-heading mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            Precisão de engenharia, do papel ao aço
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            Unimos cálculo estrutural, modelagem 3D e fabricação própria para
+            reduzir retrabalho, cumprir prazos e entregar equipamentos que
+            operam com segurança por décadas.
+          </p>
 
-            <div className="mt-8 flex flex-wrap gap-2">
-              {["NBR 8800", "NBR 14762", "NR-12", "ISO 9001", "CREA/ART"].map(
-                (tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-md border border-border bg-background px-3 py-1 text-xs font-semibold text-muted-foreground"
-                  >
-                    {tag}
-                  </span>
-                ),
-              )}
-            </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-2">
+            {NORMS.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-md border border-border bg-white/5 px-3 py-1 text-xs font-semibold text-muted-foreground"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-7">
+        <div className="relative mt-16 overflow-hidden rounded-3xl border border-border bg-white/[0.02] px-6 py-14 sm:px-14">
+          <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-primary/20 opacity-60 blur-[100px]" />
+          <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
             {DIFFERENTIALS.map((item) => (
               <div
                 key={item.title}
-                className="rounded-lg border border-border bg-background p-6"
+                className="flex flex-col items-center text-center"
               >
-                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-md bg-primary/10 text-primary">
-                  <item.icon className="h-5 w-5" aria-hidden="true" />
+                <span className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/15 text-primary">
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <h3 className="font-heading text-lg font-semibold text-foreground">
                   {item.title}
